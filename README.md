@@ -1,66 +1,27 @@
-## Foundry
+# Fundeth
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Fundeth project is a decentralized finance (DeFi) application that provides a mechanism for users to deposit funds in a vault, which are then used to purchase a basket of specified tokens. The purchased tokens are held within the vault, and users receive vault tokens representing their share of ownership in the underlying assets.
 
-Foundry consists of:
+## Deployments
+- Ethereum Sepolia: `0x7469174a347688eef76b828a5d27fc5ae27870dc`
+- Arbitrum One: `0x03C804F7C435Ad659452b6B86185FF2549Ed2085`
+- Base: `0xa63b68da994883d51114f8c9d2d1c4c0762c9038`
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Functionality
 
-## Documentation
+### Vault Contract
 
-https://book.getfoundry.sh/
+The `Vault` contract serves as the core component of the project. It allows users to:
 
-## Usage
+- Deposit funds: Users can deposit USDC into the vault.
+- Purchase tokens: Upon deposit, the vault automatically purchases a specified basket of tokens using the deposited USDC.
+- Withdraw funds: Users can withdraw their share of funds from the vault, receiving USDC in return.
 
-### Build
+## Project Structure
 
-```shell
-$ forge build
-```
+The project consists of the following components:
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- **Vault Contract:** The main smart contract that manages deposits, token purchases, and withdrawals.
+- **Vault Factory Contract:** Factory smart contract that deploys vault contracts and manages their configurations.
+- **Interfaces:** Interface contracts for interacting with external contracts, such as the Uniswap Router.
+- **Abstract Contracts:** Abstract contracts providing reusable functionality, such as ReentrancyGuard.
