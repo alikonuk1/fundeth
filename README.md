@@ -1,6 +1,6 @@
 # Fundeth
 
-Fundeth project is a decentralized finance (DeFi) application that provides a mechanism for users to deposit funds in a vault, which are then used to purchase a basket of specified tokens. The purchased tokens are held within the vault, and users receive vault tokens representing their share of ownership in the underlying assets.
+[Fundeth](https://fundy-lac.vercel.app/) project is a decentralized finance (DeFi) application that provides a mechanism for users to deposit funds in a vault, which are then used to purchase a basket of specified tokens. The purchased tokens are held within the vault, and users receive vault tokens representing their share of ownership in the underlying assets.
 
 ## Deployments
 - Ethereum Sepolia: `0x7469174a347688eef76b828a5d27fc5ae27870dc`
